@@ -26,6 +26,6 @@
       <ion-icon name="trophy" slot="start" color="success"></ion-icon>
       <ion-label color="success">{{value}}</ion-label>
     </ion-item>
-    <ion-button *ngIf="hasFooter" color="success" fill="clear" size="full">See All..</ion-button>
+    <ion-button *ngIf="hasFooter" color="success" fill="clear" size="full" (click) ="seeAllMethod()">See All..</ion-button>
   </ion-card-content>
 </ion-card>

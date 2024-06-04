@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pickup-call-card',
@@ -12,10 +13,12 @@ export class PickupCallCardComponent implements OnInit {
   @Input() createdAt: string = "";
   @Input() updatedAt: string = "";
   @Input() notes: string = "";
-  @Input() value:string = "";
+  @Input() value: string = "";
+  @Input() seeAllMethod!: (() => void);
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
+
 
 }

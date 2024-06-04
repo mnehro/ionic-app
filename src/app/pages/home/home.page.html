@@ -23,10 +23,12 @@
   </ion-list>
 
   <app-pickup-call-card status="hold" createdAt="23/05/2024" updatedAt="25/05/2024"
-    notes="We have two bags that are full, one with plastic and the other one with glass"></app-pickup-call-card>
+    notes="We have two bags that are full, one with plastic and the other one with glass"
+    [seeAllMethod]="goToPickupCalls">
+  </app-pickup-call-card>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="success">
-      <ion-icon name="add"></ion-icon>
+      <ion-icon name="add" (click)="createPickupCall()"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
