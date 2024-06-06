@@ -28,7 +28,7 @@ describe('LoadingComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoadingComponent);
-    store = TestBed.inject(Store);
+    store = TestBed.get(Store);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

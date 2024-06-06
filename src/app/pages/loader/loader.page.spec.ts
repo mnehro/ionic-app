@@ -14,7 +14,7 @@ describe('LoaderPage', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoaderPage);
-    router = TestBed.inject(Router);
+    router = TestBed.get(Router);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -13,7 +13,7 @@ import { hide, show } from 'src/store/loading/loading.actions';
 })
 export class LoginPage implements OnInit {
   public form!: FormGroup;
-  constructor(private router: Router, private formBuilder: FormBuilder, private store: Store<AppState>) { }
+  constructor(private router: Router, private formBuilder: FormBuilder, public store: Store<AppState>) { }
 
   ngOnInit() {
     this.form = new LoginPageForm(this.formBuilder).createForm();
