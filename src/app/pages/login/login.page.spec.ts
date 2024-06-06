@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginPage } from './login.page';
 import { Router } from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('LoginPage', () => {
   let component: LoginPage;
@@ -15,9 +16,14 @@ describe('LoginPage', () => {
     router = TestBed.get(Router);
     fixture.detectChanges();
     imports: [
-      AppRoutingModule
+      AppRoutingModule,
+      ReactiveFormsModule
     ]
   });
+  it('should create a form on init', () => {
+    component.ngOnInit();
+    expect(component.form).toBeTruthy();
+  })
 
   it('should create', () => {
     expect(component).toBeTruthy();
